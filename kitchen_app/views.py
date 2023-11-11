@@ -10,8 +10,8 @@ def api_view(request): #chart_data_view
     temperature = request.GET.get('temperature', None)
     gas_level = request.GET.get('gas_level', None)
     flame = request.GET.get('flame', None)
-    relay1 = request.GET.get('relay1', None)
-    relay2 = request.GET.get('relay2', None)
+    lamp = request.GET.get('lamp', None)
+    fan = request.GET.get('', None)
     switch1 = request.GET.get('switch1', None)
     switch2 = request.GET.get('switch2', None)
 
@@ -22,10 +22,8 @@ def api_view(request): #chart_data_view
         'temperature': temperature,
         'gas_level': gas_level,
         'flame': flame,
-        'relay1': relay1,
-        'relay2': relay2,
-        'relay1': relay1,
-        'relay2': relay2,
+        'lamp': lamp,
+        'fan': fan,
         'switch1' :switch1,
         'switch2':switch2,
     }

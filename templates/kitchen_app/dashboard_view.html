@@ -57,10 +57,10 @@
       <div class="card">
         <div class="card-header p-3 pt-2">
           <div class="icon icon-lg icon-shape   shadow-dark text-center border-radius-xl mt-n4 position-absolute" style="background-color: rgb(175, 135, 60);">
-            <i class="material-icons opacity-10">R1</i>
+            <i class="material-icons opacity-10">Lamp</i>
           </div>
           <div class="text-end pt-1">
-            <p class="text-sm mb-0 text-capitalize">Latest Relay 1</p>
+            <p class="text-sm mb-0 text-capitalize">Latest Lamp</p>
             <h4 class="mb-0" id="latest_strick"></h4>
           </div>
         </div>
@@ -76,10 +76,10 @@
       <div class="card">
         <div class="card-header p-3 pt-2">
           <div class="icon icon-lg icon-shape bg-gradient-dark shadow-dark text-center border-radius-xl mt-n4 position-absolute">
-            <i class="material-icons opacity-10">R2</i>
+            <i class="material-icons opacity-10">Fan</i>
           </div>
           <div class="text-end pt-1">
-            <p class="text-sm mb-0 text-capitalize">Latest Relay 2</p>
+            <p class="text-sm mb-0 text-capitalize">Latest Fan</p>
             <h4 class="mb-0" id="latest_bp"></h4>
           </div>
         </div>
@@ -132,8 +132,8 @@
                 <th>Temperature</th>
                 <th>Gas Level</th>
                 <th>Flame</th>
-                <th>Relay 1</th>
-                <th>Relay 2</th>
+                <th>Lamp</th>
+                <th>Fan</th>
                 <th>Switch 1</th>
                 <th>Switch 2</th>
             </tr>
@@ -145,8 +145,8 @@
                     <td>{{ entry.temperature }}</td>
                     <td>{{ entry.gas_level }}</td>
                     <td>{{ entry.flame }}</td>
-                    <td>{{ entry.relay1 }}</td>
-                    <td>{{ entry.relay2 }}</td>
+                    <td>{{ entry.lamp }}</td>
+                    <td>{{ entry.fan }}</td>
                     <td>{{ entry.switch1 }}</td>
                     <td>{{ entry.switch2 }}</td>
                 </tr>
@@ -184,15 +184,15 @@
                     fill: false
                 }, // Missing comma here
                 {
-                    label: 'Relay 1',
-                    data: [{% for entry in kitchen_data %}{{ entry.relay1 }},{% endfor %}],
+                    label: 'Lamp',
+                    data: [{% for entry in kitchen_data %}{{ entry.lamp }},{% endfor %}],
                     borderColor: 'rgb(255, 153, 0)',
                     borderWidth: 1,
                     fill: false
                 },
                 {
-                    label: 'Relay 2',
-                    data: [{% for entry in kitchen_data %}{{ entry.relay2 }},{% endfor %}],
+                    label: 'Fan',
+                    data: [{% for entry in kitchen_data %}{{ entry.fan }},{% endfor %}],
                     borderColor: 'rgb(51, 102, 0)',
                     borderWidth: 1,
                     fill: false
